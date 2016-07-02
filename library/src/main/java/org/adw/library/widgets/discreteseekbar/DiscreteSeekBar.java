@@ -336,6 +336,8 @@ public class DiscreteSeekBar extends View {
 
         if (mValue < mMin || mValue > mMax) {
             setProgress(mMin);
+        } else {
+            updateThumbPosFromCurrentProgress();
         }
         //We need to refresh the PopupIndicator view
         updateIndicatorSizes();
@@ -366,6 +368,8 @@ public class DiscreteSeekBar extends View {
 
         if (mValue < mMin || mValue > mMax) {
             setProgress(mMin);
+        } else {
+            updateThumbPosFromCurrentProgress();
         }
     }
 
