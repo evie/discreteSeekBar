@@ -341,6 +341,8 @@ public class DiscreteSeekBar extends View {
         }
         //We need to refresh the PopupIndicator view
         updateIndicatorSizes();
+        //Fix Wrong behavior while changing Max value on RealTime
+        updateThumbPosFromCurrentProgress();
     }
 
     public int getMax() {
@@ -371,6 +373,8 @@ public class DiscreteSeekBar extends View {
         } else {
             updateThumbPosFromCurrentProgress();
         }
+        updateIndicatorSizes();
+        updateThumbPosFromCurrentProgress();
     }
 
     public int getMin() {
@@ -1008,7 +1012,7 @@ public class DiscreteSeekBar extends View {
     }
 
     public boolean isRtl() {
-        return (ViewCompat.getLayoutDirection(this) == LAYOUT_DIRECTION_RTL) && mMirrorForRtl;
+        return (ViewCompat.getLayoutDirection(this) == ViewCompat.LAYOUT_DIRECTION_RTL) && mMirrorForRtl;
     }
 
     @Override
