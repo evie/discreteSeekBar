@@ -41,7 +41,9 @@ class SeekBarCompatDontCrash {
         marker.setOutlineProvider(new ViewOutlineProvider() {
             @Override
             public void getOutline(View view, Outline outline) {
-                outline.setConvexPath(markerDrawable.getPath());
+                // For some reason, markerDrawables are giving out concave paths on Q beta.
+                // we don't really use shadows anyways, so just don't bother.
+                //outline.setConvexPath(markerDrawable.getPath());
             }
         });
     }
