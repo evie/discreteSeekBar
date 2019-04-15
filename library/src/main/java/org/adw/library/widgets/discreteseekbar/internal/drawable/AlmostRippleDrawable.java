@@ -23,8 +23,8 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import androidx.annotation.NonNull;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import android.view.animation.Interpolator;
 
 public class AlmostRippleDrawable extends StateDrawable implements Animatable {
