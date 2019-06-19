@@ -38,5 +38,5 @@ android {
 }
 
 dependencies {
-    api "androidx.legacy:legacy-support-v4:${evie.versions.support}"
+    implementation "androidx.legacy:legacy-support-v4:${evie.versions.support}"
 }
